@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Óptica Andes</title>
+        <link type="text/css" rel="stylesheet" href="resources/css/generalStyle.css"/>
+    </h:head>
+    <h:body>
+        <ui:composition template="plantillas/main.xhtml">
+            <ui:define name="content">
+                <div id="menu" align="center">
+                    <h:panelGrid columns="4" cellpadding="1" cellspacing="1" class="panelMenu" width="100%">
+                        <h:panelGroup>
+                            <h:button id="home" value="INICIO" class="btn btnHover" onclick=""></h:button>
+                            <h:button id="ing" value="INGRESAR" class="btn"></h:button>
+                            <h:button id="reg" value="REGISTRARSE" class="btn"></h:button>
+                            <h:button id="prod" value="PRODUCTOS/SERVICIOS" class="btn"></h:button>
+                        </h:panelGroup>
+                    </h:panelGrid>
+                    <br/>
+                    <br/>
+                    <h:graphicImage class="img1" library="images" name="img1.png"/>
+                    <br/>
+                    <br/>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

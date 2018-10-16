@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="plantillas/main.xhtml">
+            <ui:define name="content">
+                <div id="menu" align="center">
+                    <h:panelGrid columns="4" cellpadding="1" cellspacing="1" class="panelMenu" width="100%">
+                        <h:panelGroup>
+                            <h:button id="home" value="INICIO" class="btn" onclick=""></h:button>
+                            <h:button id="ing" value="INGRESAR" class="btn btnHover"></h:button>
+                            <h:button id="reg" value="REGISTRARSE" class="btn"></h:button>
+                            <h:button id="prod" value="PRODUCTOS/SERVICIOS" class="btn"></h:button>
+                        </h:panelGroup>
+                    </h:panelGrid>
+                </div>
+                <div align="center">
+                    <br/>
+                    <br/>
+                    <h:form>
+                        <h:panelGrid columns="1" cellpadding="10" width="30%" class='panelLog'>
+                            <h2>
+                                Iniciar Sesión
+                            </h2>
+                            <h:outputLabel>
+                                <!--<strong>Usuario*: </strong>-->
+                                <!--p:placeholder="Usuario"-->
+                                <h:inputText id="userL" 
+                                             label="Usuario" 
+                                             validatorMessage="Usuario requerido" 
+                                             class='inp' 
+                                             p:placeholder="Usuario"
+                                             />
+                                <!--<h:message for="user" styleClass="msj" />--> 
+                            </h:outputLabel>
+                            <h:outputLabel>
+                                <!--<strong>Contraseña*: </strong>-->
+                                <!--p:placeholder="Contraseña"-->
+                                <h:inputSecret id="passL" 
+                                               label="Contraseña" 
+                                               validatorMessage="Contraseña requerido" 
+                                               class='inp'
+                                               p:placeholder="Contraseña"
+                                               />
+                                <!--<h:message for="pass" styleClass="msj" />--> 
+                            </h:outputLabel>
+                            <h:panelGroup >
+                                <h:commandButton id="enviar" 
+                                                 action="index.xhtml" 
+                                                 value="Ingresar" 
+                                                 class="btnL" 
+
+                                                 ></h:commandButton>
+                                <!--style="margin-left: 40px;"-->
+                                <h:commandButton id="limpiar" 
+                                                 action="index.xhtml" 
+                                                 type="reset" value="Limpiar" 
+                                                 class='btnL' 
+
+                                                 ></h:commandButton>
+                                <!--style="margin-left: 20px;"-->
+                            </h:panelGroup>
+                            <br/>
+                        </h:panelGrid>
+                    </h:form>
+                    <br/>
+                    <br/>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

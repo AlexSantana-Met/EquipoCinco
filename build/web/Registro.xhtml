@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="plantillas/main.xhtml">
+            <ui:define name="content">
+                <div id="menu" align="center">
+                    <h:panelGrid columns="4" cellpadding="1" cellspacing="1" class="panelMenu" width="100%">
+                        <h:panelGroup>
+                            <h:button id="home" value="INICIO" class="btn" onclick=""></h:button>
+                            <h:button id="ing" value="INGRESAR" class="btn"></h:button>
+                            <h:button id="reg" value="REGISTRARSE" class="btn btnHover"></h:button>
+                            <h:button id="prod" value="PRODUCTOS/SERVICIOS" class="btn"></h:button>
+                        </h:panelGroup>
+                    </h:panelGrid>
+                </div>
+                <div align="center">
+                    <br/>
+                    <br/>
+                    <h:form>
+                        <h:panelGrid columns="1" cellpadding="10" width="80%" style="padding-left: 300px;">
+                            <h:outputLabel>
+                                <strong>Nombre*: </strong>
+                                <h:inputText id="nom" label="Nombre" required="true" requiredMessage="Error"/>
+                                <!--<h:message for="nom" styleClass="msj" />--> 
+                            </h:outputLabel>
+                            <h:outputLabel>
+                                <strong>Apellido Paterno*: </strong>
+                                <h:inputText id="apP" label="Apellido Paterno" validatorMessage="Apellido requerido"/>
+                                <!--<h:message for="apP" styleClass="msj" />--> 
+                            </h:outputLabel>
+                            <h:outputLabel>
+                                <strong>Apellido Materno*: </strong>
+                                <h:inputText id="apM" label="Apellido Materno" validatorMessage="Apellido requerido"/>
+                                <!--<h:message for="apM" styleClass="msj" />--> 
+                            </h:outputLabel>
+                            <h:outputLabel>
+                                <strong>Correo*: </strong>
+                                <h:inputText id="email" label="Correo" validatorMessage="Correo requerido"/>
+                                <!--<h:message for="email" styleClass="msj" />--> 
+                            </h:outputLabel>
+                            <h:outputLabel>
+                                <strong>Usuario*: </strong>
+                                <h:inputText id="user" label="Usuario" validatorMessage="Usuario requerido"/>
+                                <!--<h:message for="user" styleClass="msj" />--> 
+                            </h:outputLabel>
+                            <h:outputLabel>
+                                <strong>Contraseña*: </strong>
+                                <h:inputText id="pass" label="Contraseña" validatorMessage="Contraseña requerido"/>
+                                <!--<h:message for="pass" styleClass="msj" />--> 
+                            </h:outputLabel>
+                        </h:panelGrid>
+                        <h:panelGroup>
+                            <h:commandButton id="enviar" action="index.xhtml" value="Enviar"></h:commandButton>
+                            <h:commandButton id="limpiar" action="index.xhtml" type="reset" value="Limpiar"></h:commandButton>
+                        </h:panelGroup>
+                    </h:form>
+                    <br/>
+                    <br/>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
