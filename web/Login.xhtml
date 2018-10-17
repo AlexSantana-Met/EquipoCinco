@@ -29,26 +29,20 @@
                                 Iniciar Sesión
                             </h2>
                             <h:outputLabel>
-                                <!--<strong>Usuario*: </strong>-->
-                                <!--p:placeholder="Usuario"-->
                                 <h:inputText id="userL" 
                                              label="Usuario" 
                                              validatorMessage="Usuario requerido" 
                                              class='inp' 
                                              p:placeholder="Usuario"
                                              />
-                                <!--<h:message for="user" styleClass="msj" />--> 
                             </h:outputLabel>
                             <h:outputLabel>
-                                <!--<strong>Contraseña*: </strong>-->
-                                <!--p:placeholder="Contraseña"-->
                                 <h:inputSecret id="passL" 
                                                label="Contraseña" 
                                                validatorMessage="Contraseña requerido" 
                                                class='inp'
                                                p:placeholder="Contraseña"
                                                />
-                                <!--<h:message for="pass" styleClass="msj" />--> 
                             </h:outputLabel>
                             <h:panelGroup >
                                 <h:commandButton id="enviar" 
@@ -57,14 +51,11 @@
                                                  class="btnL" 
 
                                                  ></h:commandButton>
-                                <!--style="margin-left: 40px;"-->
                                 <h:commandButton id="limpiar" 
                                                  action="index.xhtml" 
                                                  type="reset" value="Limpiar" 
                                                  class='btnL' 
-
                                                  ></h:commandButton>
-                                <!--style="margin-left: 20px;"-->
                             </h:panelGroup>
                             <br/>
                         </h:panelGrid>

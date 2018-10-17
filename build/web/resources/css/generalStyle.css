@@ -52,11 +52,13 @@ and open the template in the editor.
 
 .panelLog {
     /*background-color: rgba(0, 90, 0, .9);*/
-    background-color: hsla(105, 27%, 74%, .7);
+    /*background-color: hsla(105, 27%, 74%, .7);*/
+    background: rgba(0,0,0,.5);
     align-items: center;
     align-content: center;
     border-radius: 8px;
     text-align: center;
+    /*color: #FFF;*/
 }
 
 .inp {
@@ -70,11 +72,12 @@ and open the template in the editor.
     font-size: 20px;
     font-weight: bold;
     margin-left: 60px;
-    color: rgb(55, 107, 1);
+    /*color: rgb(55, 107, 1);*/
+    color: #FFF;
 }
 
 .btnL {
-    height: 33px;
+    height: 30px;
     width: 95px;
     opacity: .8;
     border: none;
@@ -87,10 +90,10 @@ and open the template in the editor.
     background: ghostwhite;
     font-size: 14px;
     cursor: pointer;
-    border-radius: 3%;
+    border-radius: 3px;
     float:none;
     text-align:center;
-    margin: 0px 0px;
+    margin: 0px 10px;
 }
 
 .panelLog .inp {
@@ -98,7 +101,7 @@ and open the template in the editor.
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
-    color: #000;
+    color: #FFF;
     letter-spacing: 1;
     margin-bottom: 15px;
     border: none;
@@ -110,6 +113,32 @@ and open the template in the editor.
 .panelLog h2 {
     margin: 10px 0 10px;
     padding: 0;
-    color: rgb(55, 107, 1);
+    /*color: rgb(55, 107, 1);*/
+    color: #fff;
     text-align: center;
 }
+
+.formRegistro {
+    width: 60%;
+    text-align: center;
+    background: rgba(0,0,0,.5);
+    color: #FFF;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    padding-left: 10px;
+    border-radius: 15px;
+}
+
+.formRegistro .inpRes {
+    padding-top: 10px;
+    position: relative;
+    font-size: 14px;
+    color: #FFF;
+    letter-spacing: 1;
+    border: none;
+    border-bottom: 2px solid #FFF;
+    outline: none;
+    background: transparent;
+    width: 170px;
+}
+
