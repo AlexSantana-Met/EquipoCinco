@@ -15,11 +15,12 @@ and open the template in the editor.
     height: 35px;
     border: none;
     width: 180px;
-    margin-left: 85px;
+    margin-left: 20px;
 }
 
 .panelMenu {
     background: rgb(5, 76, 36);
+    text-align: center;
 }
 
 .btn:hover{
@@ -86,10 +87,10 @@ and open the template in the editor.
     background: ghostwhite;
     font-size: 14px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 3%;
     float:none;
     text-align:center;
-    margin: 0px 10px;
+    margin: 0px 0px;
 }
 
 .panelLog .inp {
@@ -97,7 +98,7 @@ and open the template in the editor.
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
-    color: #FFF;
+    color: #000;
     letter-spacing: 1;
     margin-bottom: 15px;
     border: none;
