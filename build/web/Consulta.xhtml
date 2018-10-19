@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Consulta</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="plantillas/main.xhtml">
+            <ui:define name="content">
+                <div id="menu" align="center">
+                    <h:panelGrid columns="4" cellpadding="1" cellspacing="1" class="panelMenu" width="100%">
+                        <h:panelGroup>
+                            <h3> Bientevido a su consulta </h3>
+                        </h:panelGroup>
+                    </h:panelGrid>
+                </div>
+                <div id="menu2" align="center">
+                    <br/>
+                    <h:form>
+                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
+                            <h3>Fecha </h3>
+<!--                           <h:outputText value="#{item.fecharequisito}">-->
+                            <h:outputText value="18/10/2018 12:12:12">
+                                <!--<f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />-->
+                            </h:outputText>
+                        </h:panelGrid>
+                    </h:form>
+                    <br/>
+                    <h:form>
+                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
+                            <h3>Tipo de servicio/petición </h3>
+
+                            <h:outputText value="Consulta Oftamoligica">
+
+                            </h:outputText>
+                        </h:panelGrid>
+                    </h:form>
+                    <br/>
+                    <h:form>
+                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
+                            <h3> Area </h3>
+
+                            <h:outputText value="oftalmológica">
+
+                            </h:outputText>
+                        </h:panelGrid>
+                    </h:form>
+                    <br/>
+                    <h:form>
+                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
+                            <h3> Descripción enviada </h3>
+
+                            <h:outputText value="La cita quedo para el día 30/02018 ">
+
+                            </h:outputText>
+                        </h:panelGrid>
+                    </h:form>
+                    <br/>
+
+                    <h:form>
+                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
+                            <h3> Respuesta </h3>
+                            <h:outputText value="Perfecto muchas gracias ">   </h:outputText>
+                        </h:panelGrid>
+                    </h:form>
+
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <h:panelGroup>
+                    <h:commandButton id="Aceptar" 
+                                     action="textarea.xhtml" 
+                                     value="Aceptar" 
+                                     class="btnVC" 
+
+                                     ></h:commandButton>
+                </h:panelGroup>
+
+                <h:panelGroup>
+                    <h:commandButton id="Responder" 
+                                     action="Responder.xhtml" 
+                                     value="Responder" 
+                                     class="btnVC" 
+
+                                     ></h:commandButton>
+                </h:panelGroup>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

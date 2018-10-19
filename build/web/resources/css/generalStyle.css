@@ -23,6 +23,14 @@ and open the template in the editor.
     text-align: center;
 }
 
+.panelSup {
+    background: rgb(5, 76, 36);
+    text-align: center;
+}
+.panelSup h2 {
+    color: #FFF;
+}
+
 .btn:hover{
     background: rgb(1, 45, 18);
 }
