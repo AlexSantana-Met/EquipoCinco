@@ -10,23 +10,25 @@
     <h:body>
         <ui:composition template="plantillas/main.xhtml">
             <ui:define name="content">
-                <div id="menu" align="center">
-                    <h:panelGrid columns="4" cellpadding="1" cellspacing="1" class="panelMenu" width="100%">
-                        <h:panelGroup>
-                            <h:button id="home" value="INICIO" class="btn" onclick=""></h:button>
-                            <h:button id="ing" value="INGRESAR" class="btn"></h:button>
-                            <h:button id="reg" value="REGISTRARSE" class="btn btnHover"></h:button>
-                            <h:button id="prod" value="PRODUCTOS/SERVICIOS" class="btn"></h:button>
-                        </h:panelGroup>
-                    </h:panelGrid>
-                </div>
+                <h:form>
+                    <div id="menu" align="center">
+                        <h:panelGrid columns="4" cellpadding="1" cellspacing="1" class="panelMenu" width="100%">
+                            <h:panelGroup>
+                                <h:commandButton id="home" value="INICIO" class="btn " action="index.xhtml"></h:commandButton>
+                                <h:commandButton id="ing" value="INGRESAR" class="btn" action="Login.xhtml"></h:commandButton>
+                                <h:commandButton id="reg" value="REGISTRARSE" class="btn btnHover"></h:commandButton>
+                                <h:commandButton id="prod" value="PRODUCTOS/SERVICIOS" class="btn" action="ProdServ.xhtml"></h:commandButton>
+                            </h:panelGroup>
+                        </h:panelGrid>
+                    </div>
+                </h:form>
                 <div align="center">
                     <br/>
                     <h:form>
                         <div class="formRegistro">
                             <!--<h:panelGrid columns="1" cellpadding="10" width="60%" style="text-align: center;">-->
                             <h2>
-                                Datos del cliente
+                                Datos de contacto
                             </h2>
                             <h:panelGrid columns="3" cellpadding="10" width="100%" style="text-align:left;">
                                 <h:outputLabel>

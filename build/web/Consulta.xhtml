@@ -11,82 +11,59 @@
             <ui:define name="content">
                 <div id="menu" align="center">
                     <h:panelGrid columns="4" cellpadding="1" cellspacing="1" class="panelMenu" width="100%">
-                        <h:panelGroup>
-                            <h3> Bientevido a su consulta </h3>
-                        </h:panelGroup>
+                        <h2> Área de consulta de peticiones </h2>
                     </h:panelGrid>
                 </div>
-                <div id="menu2" align="center">
+                <div align="center">
                     <br/>
-                    <h:form>
-                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
-                            <h3>Fecha </h3>
-<!--                           <h:outputText value="#{item.fecharequisito}">-->
-                            <h:outputText value="18/10/2018 12:12:12">
-                                <!--<f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />-->
-                            </h:outputText>
+                    <div align="center" class="panelBack">
+                        <div align="right">
+                            <h:panelGrid columns="2" cellpadding="10" cellspacing="1">
+                                <h3>Fecha: </h3>
+                                <h:outputText value=" 18/10/2018 12:12:12"/>
+                            </h:panelGrid>
+                        </div>
+                        <hr/>
+                        <h:panelGrid columns="2" cellpadding="5">
+                            <h3 style="text-align: right;">Tipo de servicio/petición: </h3>
+                            <h:outputText value=" Consulta Oftomológica"/>
+                            <h3 style="text-align: right;">Area: </h3>
+                            <h:outputText value="Oftalmológica"/>
                         </h:panelGrid>
-                    </h:form>
+                        <hr/>
+                        <div align="left">
+                            <h:form>
+                                <h:panelGrid columns="1" cellpadding="1" cellspacing="1">
+                                    <h3>Descripción enviada: </h3>
+                                    <h:inputTextarea disabled="true" 
+                                                     value="Buenas tardes, me gustaría reservar para un chequeo de ojos"
+                                                     class="textArea"
+                                                     rows="5"
+                                                     readonly="true"
+                                                     />
+                                </h:panelGrid>
+                                <h:panelGrid columns="2" cellpadding="1" cellspacing="1">
+                                    <h3>Respuesta: </h3>
+                                    <h:commandButton id="Aceptar"
+                                                     value="Aceptar" 
+                                                     class="btnL" 
+                                                     />
+                                    <h:inputTextarea disabled="true" 
+                                                     value="Claro que si, la cita quedo para el día 30/10/2018"
+                                                     class="textArea"
+                                                     rows="5"
+                                                     readonly="true"
+                                                     />
+                                    <h:commandButton id="Responder"
+                                                     value="Responder" 
+                                                     class="btnL" 
+                                                     />
+                                </h:panelGrid>
+                            </h:form>
+                        </div>
+                    </div>
                     <br/>
-                    <h:form>
-                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
-                            <h3>Tipo de servicio/petición </h3>
-
-                            <h:outputText value="Consulta Oftamoligica">
-
-                            </h:outputText>
-                        </h:panelGrid>
-                    </h:form>
-                    <br/>
-                    <h:form>
-                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
-                            <h3> Area </h3>
-
-                            <h:outputText value="oftalmológica">
-
-                            </h:outputText>
-                        </h:panelGrid>
-                    </h:form>
-                    <br/>
-                    <h:form>
-                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
-                            <h3> Descripción enviada </h3>
-
-                            <h:outputText value="La cita quedo para el día 30/02018 ">
-
-                            </h:outputText>
-                        </h:panelGrid>
-                    </h:form>
-                    <br/>
-
-                    <h:form>
-                        <h:panelGrid columns="1" cellpadding="1" cellspacing="1" class="panel3" width="80%">
-                            <h3> Respuesta </h3>
-                            <h:outputText value="Perfecto muchas gracias ">   </h:outputText>
-                        </h:panelGrid>
-                    </h:form>
-
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <h:panelGroup>
-                    <h:commandButton id="Aceptar" 
-                                     action="textarea.xhtml" 
-                                     value="Aceptar" 
-                                     class="btnVC" 
-
-                                     ></h:commandButton>
-                </h:panelGroup>
-
-                <h:panelGroup>
-                    <h:commandButton id="Responder" 
-                                     action="Responder.xhtml" 
-                                     value="Responder" 
-                                     class="btnVC" 
-
-                                     ></h:commandButton>
-                </h:panelGroup>
             </ui:define>
         </ui:composition>
     </h:body>

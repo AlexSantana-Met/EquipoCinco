@@ -16,17 +16,23 @@ and open the template in the editor.
     border: none;
     width: 180px;
     margin-left: 20px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .panelMenu {
     background: rgb(5, 76, 36);
     text-align: center;
+    position: initial;
+    overflow: hidden;
 }
 
 .panelSup {
     background: rgb(5, 76, 36);
     text-align: center;
 }
+
+.panelMenu h2,
 .panelSup h2 {
     color: #FFF;
 }
@@ -150,3 +156,23 @@ and open the template in the editor.
     width: 170px;
 }
 
+.panelBack {
+/*    background: rgba(0,0,0,.5);*/
+    align-items: center;
+    align-content: center;
+    border-radius: 8px;
+    text-align: center;
+    width: 60%;
+    background-color: rgba(171,171,171,.4);
+    /*background: rgba(0,0,0,.5);*/
+    padding: 15px 15px;
+}
+
+.panelMenu h3 {
+    color: #FFF;
+}
+
+.textArea {
+    resize: none;
+    width: 500px;
+}
