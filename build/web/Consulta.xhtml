@@ -7,6 +7,7 @@
         <title>Consulta</title>
     </h:head>
     <h:body>
+
         <ui:composition template="plantillas/main.xhtml">
             <ui:define name="content">
                 <div id="menu" align="center">
@@ -32,7 +33,7 @@
                         </h:panelGrid>
                         <hr/>
                         <div align="left">
-                            <h:form>
+                            <h:form id="formDesc">
                                 <h:panelGrid columns="1" cellpadding="1" cellspacing="1">
                                     <h3>Descripción enviada: </h3>
                                     <h:inputTextarea disabled="true" 
@@ -44,9 +45,10 @@
                                 </h:panelGrid>
                                 <h:panelGrid columns="2" cellpadding="1" cellspacing="1">
                                     <h3>Respuesta: </h3>
-                                    <h:commandButton id="Aceptar"
+                                    <h:commandButton id="acep"
                                                      value="Aceptar" 
                                                      class="btnL" 
+                                                     action="MenuEmpleados.xhtml"
                                                      />
                                     <h:inputTextarea disabled="true" 
                                                      value="Claro que si, la cita quedo para el día 30/10/2018"
@@ -54,9 +56,10 @@
                                                      rows="5"
                                                      readonly="true"
                                                      />
-                                    <h:commandButton id="Responder"
+                                    <h:commandButton id="resp"
                                                      value="Responder" 
-                                                     class="btnL" 
+                                                     class="btnL"
+                                                     type="button"
                                                      />
                                 </h:panelGrid>
                             </h:form>
