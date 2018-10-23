@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body >
+        <ui:composition template="plantillas/main.xhtml">
+            <ui:define name="content">
+                <h:form>
+                    <h:dataTable value="#{cliente.nadado}" var="dato" styleClass="tabla" captionClass="caption">
+                        <f:facet name="caption">Registro de interacciones</f:facet>
+                        <h:column >
+                            <f:facet name="header">Fecha</f:facet>
+                                #{dato.fecha}
+                        </h:column> 
+                        <h:column >
+                            <f:facet name="header">Tipo</f:facet>
+                                #{dato.tipo}
+                        </h:column>
+                        <h:column >
+                            <f:facet name="header">Situacion en especifico</f:facet>
+                                #{dato.esp}
+                        </h:column> 
+                        <h:column >
+                            <f:facet name="header">Descripcion</f:facet>
+                                #{dato.des}
+                        </h:column>
+                        <h:column >
+                            <f:facet name="header">Status</f:facet>
+                                #{dato.sta}
+                        </h:column> 
+                        <h:column  >
+                            <f:facet name="header">Acciones</f:facet>
+                            <h:commandButton class="btn ver" value="Ver" action="Ver.xhtml" />                           
+                            <h:commandButton class="btn eliminar" value="Eliminar" />
+                        </h:column>
+
+                    </h:dataTable>
+                    <h:commandButton class="btn agregar" value="Crear" action="Formulario.xhtml"/>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </h:body>
+
+</html>
+

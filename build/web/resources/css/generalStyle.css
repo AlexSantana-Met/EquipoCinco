@@ -245,3 +245,46 @@ par, impar{
     border: 1px rgba(0,0,0,.2) solid;
     padding: 10px 15px;
 }
+table {
+    border-collapse: collapse;  
+    width: 70%; 
+    margin: 0 auto 5rem;}
+
+th, td { 
+    padding: 1.5rem;
+    font-size: 1.3rem; 
+    transition: .4s ease-in; }
+
+tr {
+    background: hsla(54, 66%, 87%,.7);}
+
+
+
+th{
+    background: hsl(101, 34%, 44%);}
+
+tr:nth-child(even) { 
+    background: hsla(76, 54%, 71%, .7); }
+tr:hover:not(#firstrow), tr:hover td:empty {background: #d7d4cd; pointer-events: visible;}
+tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+
+
+
+.eliminar {background-color: #f44336;} 
+.eliminar:hover {background: #da190b;}
+.agregar {background-color: #4CAF50;} 
+.agregar:hover {background-color: #46a049;}
+.ver {background-color: #2196F3;}
+.ver:hover {background: #0b7dda;}
+.volver {background-color: #ff9800;} 
+.volver:hover {background: #e68a00;}
+
+
+textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
