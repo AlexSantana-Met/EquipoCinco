@@ -31,36 +31,49 @@
                         <!--<f:facet name="caption">Menu Empleado</f:facet>-->
                         <h:column>
                             <f:facet name="header">FECHA</f:facet>
-                            <f:facet name="footer"> 03/12/2018</f:facet>
+                            Fecha
+                            <!--                            <f:facet name="footer"> 03/12/2018</f:facet>-->
                         </h:column>
-                        
+
                         <h:column>
                             <f:facet name="header">DESCRIPCIÓN</f:facet>
-                            <f:facet name="footer">Porfavor me podriasacar una cita oftalmológica</f:facet>
+                            Cita
+                            <!--<f:facet name="footer">Porfavor me podriasacar una cita oftalmológica</f:facet>-->
                         </h:column>
-                        
+
                         <h:column>
                             <f:facet name="header">NOMBRE DEL CLIENTE</f:facet>
-                            <f:facet name="footer">Juan</f:facet>
+                            Juan
+                            <!--<f:facet name="footer">Juan</f:facet>-->
                         </h:column>
-                        
+
                         <h:column>
                             <f:facet name="header">OPCIONES</f:facet>
-                            <h:panelGroup>
-                                <b:button id="responder" 
-                                          value="R" 
-                                          class="btnR" 
-                                          />
-                                <b:button id="eliminar"
-                                          value="eliminar" 
-                                          class="btnR" />
-                                <b:button id="Consultar" 
-                                          value="C" 
-                                          class="btnR" />
-                            </h:panelGroup>
+
                         </h:column>
                     </h:dataTable>
+                    <br/>
+                    <div align="left" style="text-align: center">
+                        <h:panelGroup>
+                            <b:button id="res" 
+                                      look="primary"
+                                      icon-awesome="eye"
+                                      value="Agregar">
+                            </b:button>
+                            <b:button id="elim" 
+                                      look="danger"
+                                      icon-awesome="minus-circle"
+                                      value="Eliminar">
+                            </b:button>
+                            <b:button id="con"  
+                                      look="warning"
+                                      icon-awesome="edit"
+                                      value="Modificar">
+                            </b:button>
+                        </h:panelGroup>
+                    </div>
                 </div>
+
             </ui:define>
         </ui:composition>
     </h:body>

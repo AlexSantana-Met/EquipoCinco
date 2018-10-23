@@ -229,3 +229,19 @@ and open the template in the editor.
 par, impar{
     border: 1px #000 solid;
 }
+
+#res,#elim,#con {
+    height: 30px;
+    width: 80px;
+    font-size: 12px;
+}
+
+#tableEmpleado {
+    width: 80%;
+}
+
+#tableEmpleado table thead tr th,
+#tableEmpleado table tr td {
+    border: 1px rgba(0,0,0,.2) solid;
+    padding: 10px 15px;
+}
