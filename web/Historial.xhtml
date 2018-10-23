@@ -3,45 +3,75 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body >
         <ui:composition template="plantillas/main.xhtml">
             <ui:define name="content">
-                <h:form>
-                    <h:dataTable value="#{cliente.nadado}" var="dato" styleClass="tabla" captionClass="caption">
-                        <f:facet name="caption">Registro de interacciones</f:facet>
-                        <h:column >
-                            <f:facet name="header">Fecha</f:facet>
-                                #{dato.fecha}
-                        </h:column> 
-                        <h:column >
-                            <f:facet name="header">Tipo</f:facet>
-                                #{dato.tipo}
-                        </h:column>
-                        <h:column >
-                            <f:facet name="header">Situacion en especifico</f:facet>
-                                #{dato.esp}
-                        </h:column> 
-                        <h:column >
-                            <f:facet name="header">Descripcion</f:facet>
-                                #{dato.des}
-                        </h:column>
-                        <h:column >
-                            <f:facet name="header">Status</f:facet>
-                                #{dato.sta}
-                        </h:column> 
-                        <h:column  >
-                            <f:facet name="header">Acciones</f:facet>
-                            <h:commandButton class="btn ver" value="Ver" action="Ver.xhtml" />                           
-                            <h:commandButton class="btn eliminar" value="Eliminar" />
-                        </h:column>
-
-                    </h:dataTable>
-                    <h:commandButton class="btn agregar" value="Crear" action="Formulario.xhtml"/>
-                </h:form>
+                <div id="menu" align="center">
+                    <h:panelGrid columns="2" cellpadding="1" cellspacing="1" class="panelSup" width="100%">
+                        <h:panelGroup>
+                            <h2> Bienvenido, Cliente </h2>
+                        </h:panelGroup>
+                        <h:panelGroup>
+                            <b:button value="Cerrar Sesión"
+                                      href="index.xhtml"
+                                      class="btnLog"
+                                      id="logout"/>
+                        </h:panelGroup>
+                    </h:panelGrid>
+                </div>
+                <br/>
+                <br/>
+                <div align="center">
+                    <!--<h:form>-->
+                        <h:dataTable id="tablaCli" value="#{cliente.nadado}" var="dato" captionClass="caption" styleClass="tabla">
+                            <f:facet name="caption">Registro de interacciones</f:facet>
+                            <h:column >
+                                <f:facet name="header">Fecha</f:facet>
+                                    #{dato.fecha}
+                            </h:column> 
+                            <h:column >
+                                <f:facet name="header">Tipo</f:facet>
+                                    #{dato.tipo}
+                            </h:column>
+                            <h:column >
+                                <f:facet name="header">Situacion en especifico</f:facet>
+                                    #{dato.esp}
+                            </h:column> 
+                            <h:column >
+                                <f:facet name="header">Descripcion</f:facet>
+                                    #{dato.des}
+                            </h:column>
+                            <h:column >
+                                <f:facet name="header">Status</f:facet>
+                                    #{dato.sta}
+                            </h:column> 
+                            <h:column  >
+                                <f:facet name="header">Acciones</f:facet>
+                                                            <b:button id="see" 
+                                                                      look="btn ver"
+                                                                      icon-awesome="eye"
+                                                                      value="Ver">
+                                                            </b:button>
+                                                            <b:button id="del" 
+                                                                      look="btn eliminar"
+                                                                      icon-awesome="minus-circle"
+                                                                      value="Eliminar">
+                                                            </b:button>
+<!--                                <h:commandButton class="btn ver" value="Ver" action="Ver.xhtml" />                           
+                                <h:commandButton class="btn eliminar" value="Eliminar" />-->
+                            </h:column>
+                        </h:dataTable>
+                    <br/>
+                    <br/>
+                    <h:form>
+                        <h:commandButton class="btn agregar" value="Nueva Petición" action="Formulario.xhtml"/>
+                    </h:form>
+                </div>
             </ui:define>
 
         </ui:composition>

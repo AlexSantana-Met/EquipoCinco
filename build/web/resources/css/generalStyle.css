@@ -236,39 +236,44 @@ par, impar{
     font-size: 12px;
 }
 
+#tablaCli,
 #tableEmpleado {
     width: 80%;
 }
 
 #tableEmpleado table thead tr th,
-#tableEmpleado table tr td {
+#tableEmpleado table tr td,
+#tablaCli table thead tr th,
+#tablaCli table tr td {
     border: 1px rgba(0,0,0,.2) solid;
     padding: 10px 15px;
 }
-table {
-    border-collapse: collapse;  
-    width: 70%; 
-    margin: 0 auto 5rem;}
 
-th, td { 
-    padding: 1.5rem;
+#tablaCli table {
+    border-collapse: collapse;  
+    width: 80%; 
+    /*margin: 0 auto 5rem;*/
+    border: 1px rgba(0,0,0,.2) solid;
+}
+
+#tablaCli th, #tablaCli td { 
+    padding: 7px;
+    /*padding: 1.5rem;*/
     font-size: 1.3rem; 
     transition: .4s ease-in; }
 
-tr {
+#tablaCli tr {
     background: hsla(54, 66%, 87%,.7);}
 
+#tablaCli th{
+    background: hsl(101, 34%, 44%);
+    text-align: center;
+}
 
-
-th{
-    background: hsl(101, 34%, 44%);}
-
-tr:nth-child(even) { 
+#tablaCli tr:nth-child(even) { 
     background: hsla(76, 54%, 71%, .7); }
-tr:hover:not(#firstrow), tr:hover td:empty {background: #d7d4cd; pointer-events: visible;}
-tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
-
-
+#tablaCli tr:hover:not(#firstrow), tr:hover td:empty {background: #d7d4cd; pointer-events: visible;}
+#tablaCli tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
 
 .eliminar {background-color: #f44336;} 
 .eliminar:hover {background: #da190b;}
@@ -279,12 +284,18 @@ tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0
 .volver {background-color: #ff9800;} 
 .volver:hover {background: #e68a00;}
 
-
 textarea{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.caption {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
 }

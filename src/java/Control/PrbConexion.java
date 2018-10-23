@@ -5,6 +5,7 @@
  */
 package Control;
 
+import Paquete.Principal;
 import java.sql.Connection;
 
 /**
@@ -22,6 +23,8 @@ public class PrbConexion {
         csql = new NewClass();
         conn = csql.conecta();
         System.out.println(csql.listar());
+        Principal pl = new Principal();
+        pl.buscaCliente();
     }
 
 }
